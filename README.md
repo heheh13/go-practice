@@ -132,6 +132,73 @@ go run -race src/main.go
         }
         need some more understanding about recover
 
+## pointers
+
+        a := 42
+        var b *int = &a
+        fmt.Println(a, b)
+        fmt.Println(a, *b)
+        fmt.Printf("%d %d ", &a, &b)
+
+## structs
+
+`decleartions of structs`
+
+        type Doctor struct {
+            number     int
+            actorName  string
+            companions []string
+        }
+
+        aDoctor := Doctor{
+                number:    3,
+                actorName: "jhon partwee",
+                companions: []string{
+                    "heheh hehe ",
+                    "jo grant",
+                    "shara jane",
+                },
+            }
+        fmt.Println(aDoctor)
+
+`struct can be embeded to over come inheritence`
+
+        type animal struct {
+            name   string
+            origin string
+        }
+
+        type bird struct {
+            animal
+            speed  int32
+            canFly bool
+        }
+
+        b := bird{
+            animal: animal{
+                name:   "doyel",
+                origin: "bd",
+            },
+            canFly: true,
+            speed:  60,
+        }
+
+        fmt.Println(b)
+
+`slices of structures`
+
+        type point struct {
+            x, y int
+        }
+
+        points := []point{}
+
+        for i := 0; i < 10; i++ {
+            p := point{x: i, y: i}
+            points = append(points, p)
+        }
+        fmt.Println(points)
+
 ## rand
 
         math/rand
