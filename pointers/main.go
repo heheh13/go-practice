@@ -19,4 +19,12 @@ func main() {
 	x := arr
 	fmt.Println(c)
 	fmt.Println(x)
+	var ms *myStruct
+	ms = new(myStruct)
+	ms.foo = 42
+	fmt.Print(ms)
+}
+
+type myStruct struct {
+	foo int
 }

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 //Doctor is doctore
@@ -25,6 +26,12 @@ type bird struct {
 
 type point struct {
 	x, y int
+}
+
+//Circle need doc
+/// need doc
+type Circle struct {
+	x, y, r float32
 }
 
 func main() {
@@ -74,4 +81,15 @@ func main() {
 	}
 	fmt.Println(points)
 
+	c := new(Circle)
+	*c = Circle{0, 0, 5}
+	fmt.Println(circleArea(c))
+	fmt.Println(c.area())
+
+}
+func circleArea(c *Circle) float32 {
+	return math.Pi * c.r * c.r
+}
+func (c *Circle) area() float32 {
+	return math.Pi * c.r * c.r
 }

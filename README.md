@@ -198,6 +198,57 @@ go run -race src/main.go
             points = append(points, p)
         }
         fmt.Println(points)
+`structure methods`
+
+        type Circle struct {
+            x, y, r float32
+        }
+
+        func (c *Circle) area() float32{
+            return (math.Pi * c.r * c.r)
+        }
+
+        c := new(Circle)
+        *c = Circle{0, 0, 5}
+        fmt.Println(c.area())
+
+## interfaces
+
+`interfaces can be used as types where ever i want to use as a params type , return type , in  map ??`
+
+`any shape having the area methods implemts the interfaces`
+
+        type shape interface {
+            area() float32
+        }
+
+        type shape2 interface {
+            haveFun() float32
+        }
+
+        func (c *circle) haveFun() float32 {
+            fmt.Println("having fun wiht circle")
+            return math.Pi
+        }
+        func (r rect) area() float32 {
+            return r.x * r.y
+        }
+`from main`
+
+        c := circle{0, 0, 5}
+        r := rect{2, 3}
+
+        shapes := []shape{&c, r}
+
+        for _, shape := range shapes {
+            fmt.Println(shape.area())
+        }
+`struct circle and rect implements a different interfaces`
+
+        difShape := []shape2{c, r}
+        for _, shape := range difShape {
+            fmt.Println(shape.haveFun())
+        }
 
 ## rand
 
