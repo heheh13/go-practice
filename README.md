@@ -275,7 +275,6 @@ go run -race src/main.go
     }
 
     func main() {
-        //var wg sync.waitGroup
         ch := make(chan string)
         go count("sheep", ch)
         for msg := range ch {
@@ -339,7 +338,7 @@ go run -race src/main.go
             go worker(jobs, results)
             go worker(jobs, results)
             go worker(jobs, results)
-            
+
             for i := 0; i < 100; i++ {
                 jobs <- i
             }
@@ -348,6 +347,12 @@ go run -race src/main.go
                 fmt.Println(<-results)
             }
         }
+
+## Packeges
+
+`Packages are easy and simple to use`
+`what we need to customise our own realative import and do our best usages`
+`we can add aliases to avoid conflicts`
 
 ## rand
 

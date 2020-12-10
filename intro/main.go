@@ -1,12 +1,18 @@
 package main
 
+import (
+	"fmt"
+
+	"github.com/heheh13/go-practice/packages/utility"
+)
+
 var (
 	i int
 	k float32 = 45
 )
 
 func main() {
-	help()
+	// help()
 	// fmt.Println("hello go!")
 
 	// fmt.Println(i)
@@ -179,6 +185,7 @@ func main() {
 	// interfaces
 
 	// var w Writer = ConsoleWriter{}
+	fmt.Println(utility.Hello())
 }
 
 // type Writer interface {

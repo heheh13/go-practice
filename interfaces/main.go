@@ -8,7 +8,7 @@ import (
 //interfaces can be used as types where ever i want to use
 /// as a params type , return type , in  map ??
 
-/// any shape having the area methods implemts the interfaces
+/// any shape having the area methods implements the interfaces
 type shape interface {
 	area() float32
 	//have() float32
@@ -32,7 +32,7 @@ func (c *circle) area() float32 {
 
 func (c circle) haveFun() string {
 
-	return "having fun wiht circle"
+	return "having fun with circle"
 }
 
 func (r rect) area() float32 {
@@ -40,7 +40,7 @@ func (r rect) area() float32 {
 }
 
 func (r rect) haveFun() string {
-	return "having fun wiht rect"
+	return "having fun with rect"
 }
 
 func getArea(s shape) float32 {
