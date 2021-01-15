@@ -47,6 +47,7 @@ package main
 import (
 	"crypto/sha1"
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -54,4 +55,5 @@ func main() {
 	h.Write([]byte("kdkjfdkf 1"))
 	bs := h.Sum([]byte{})
 	fmt.Println(string(bs))
+	fmt.Println(time.Now())
 }

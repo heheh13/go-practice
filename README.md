@@ -11,10 +11,10 @@ go run -race src/main.go
 
 ## constant
 
-`iota` is a special case that is used for enumrate constant
+`iota` is a special case that is used for enumerate constant
 
-    * imutable
-    * must be callcuated at complied time
+    * immutable
+    * must be calculated at complied time
     * upper case constant exported to package level
     * can use bitwise op to initiate const
 
@@ -22,7 +22,7 @@ go run -race src/main.go
 
     * for i ; i < n ;i ++{}
     * for {}
-    * for i , j = 0 , 0 ; cond ; i , j = i+1 , j+1{}
+    * for i , j = 0 , 0 ; condition ; i , j = i+1 , j+1{}
     * can use break
     * can use labels to exit from loop
 
@@ -36,7 +36,7 @@ go run -race src/main.go
         work with ref
         slice = append(slice, val)
         
-        having fun with mulitdimentional slice
+        having fun with multidimensional slice
         
         hell := make([][]int, 4)
         
@@ -55,13 +55,13 @@ go run -race src/main.go
             "number":1,
         }
 
-        multidimentainal maps
+        multidimensional maps
 
         el := make(map[string]map[string]int)
         fmt.Println(el)
 
         elements := map[string]map[string]int{
-                "adress": map[string]int{
+                "address": map[string]int{
                     "house": 1,
                     "road":  2,
                 },
@@ -71,7 +71,7 @@ go run -race src/main.go
                     "month": 4,
                 },
             }
-            fmt.Println(elements["adress"]["house"])
+            fmt.Println(elements["address"]["house"])
             fmt.Println(elements)
 
 ## functions
@@ -80,11 +80,11 @@ go run -race src/main.go
             return name, age
         }
 
-        func vaiadic(values ...int) {
+        func variadic(values ...int) {
             fmt.Println(values)
         }
 
-`clousers`
+`closers`
 
         func everGenerator() func() int {
             x := 0
@@ -113,7 +113,7 @@ go run -race src/main.go
 
     call after function returns?
 
-    linfastout
+    lastinfastout
 
     can use to some thing that need to close letter
 
@@ -378,3 +378,11 @@ go run -race src/main.go
 `str += string(rune(n)+ 'a')`
 
 `go run -race to check for data race`
+
+## Resources
+
+[An Introduction to Programming in GO](https://www.golang-book.com/books/intro)
+
+[Effective Go](https://golang.org/doc/effective_go.html)
+
+[tutorials](https://golang.org/doc/effective_go.html)
